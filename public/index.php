@@ -11,7 +11,7 @@ switch ($_SERVER['PATH_INFO']){
         $controlador->processaRequisicao();
         break;
     case '/novo-curso';
-        $controlador = new \Alura\Cursos\Controller\FormularioInsercao();
+        $controlador = new FormularioInsercao();
         $controlador->processaRequisicao();
         break;
     default:
