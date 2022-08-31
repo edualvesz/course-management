@@ -1,22 +1,21 @@
 <?php
 
+require __DIR__ .'/../vendor/autoload.php';
+
+use \Alura\Cursos\Controller\ListarCursos;
+use \Alura\Cursos\Controller\FormularioInsercao;
+
 switch ($_SERVER['PATH_INFO']){
     case '/listar-cursos':              //two points allows to execute everything that follows below
-        require 'listar-cursos;php';
+        $controlador = new ListarCursos();
+        $controlador->processaRequisicao();
         break;
     case '/novo-curso';
-        require 'form-novo-curso.php';
+        $controlador = new \Alura\Cursos\Controller\FormularioInsercao();
+        $controlador->processaRequisicao();
         break;
     default:
         echo "Erro 404";
 }
-
-// if($_SERVER['PATH_INFO'] === '/listar-cursos'){
-//     require 'listar-cursos;php';
-// } else if ($_SERVER['PATH_INFO'] === '/novo-curso.php') {
-//     require 'form-novo-curso.php';
-// } else {
-//     echo 'Erro 404';
-// }
 
 ?>
