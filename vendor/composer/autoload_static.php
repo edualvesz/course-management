@@ -32,11 +32,20 @@ class ComposerStaticInit8a65254bf29796f716b6779ab2c8f427
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Component\\Cache\\' => 24,
         ),
+        'R' => 
+        array (
+            'RegexGuard\\' => 11,
+        ),
         'P' => 
         array (
             'Psr\\Log\\' => 8,
             'Psr\\Container\\' => 14,
             'Psr\\Cache\\' => 10,
+            'PhpParser\\' => 10,
+        ),
+        'M' => 
+        array (
+            'Minime\\Annotations\\' => 19,
         ),
         'D' => 
         array (
@@ -107,6 +116,10 @@ class ComposerStaticInit8a65254bf29796f716b6779ab2c8f427
         array (
             0 => __DIR__ . '/..' . '/symfony/cache',
         ),
+        'RegexGuard\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/regex-guard/regex-guard/src',
+        ),
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/src',
@@ -118,6 +131,14 @@ class ComposerStaticInit8a65254bf29796f716b6779ab2c8f427
         'Psr\\Cache\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/cache/src',
+        ),
+        'PhpParser\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
+        ),
+        'Minime\\Annotations\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/minime/annotations/src',
         ),
         'Doctrine\\Persistence\\' => 
         array (

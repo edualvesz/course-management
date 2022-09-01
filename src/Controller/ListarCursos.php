@@ -14,9 +14,10 @@ class ListarCursos implements InterfaceControladorRequisicao
         $entityManager = (new EntityManagerCreator())->getEntityManager();
         $this->repositorioDeCursos = $entityManager->getRepository(Curso::class);
     }
-
+    
     public function processaRequisicao(): void{
         $cursos = $this->repositorioDeCursos->findAll();
+        $titulo = 'Listar Cursos';
         require __DIR__.'/../../view/cursos/listar-cursos.php'; //requires the view in this controller
     }
 }

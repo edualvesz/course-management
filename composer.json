@@ -7,6 +7,7 @@
     "require": {
         "doctrine/orm": "^2.6",
         "symfony/cache": "^6.0",
-        "doctrine/annotations": "^1.13"
+        "doctrine/annotations": "^1.13",
+        "minime/annotations": "^3.1"
     }
 }
