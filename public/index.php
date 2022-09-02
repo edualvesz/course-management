@@ -4,6 +4,7 @@ require __DIR__ .'/../vendor/autoload.php'; //finds the classes without giving r
 
 use \Alura\Cursos\Controller\ListarCursos;
 use \Alura\Cursos\Controller\FormularioInsercao;
+use \Alura\Cursos\Controller\Persistencia;
 
 //var_dump($_SERVER);
 
@@ -14,6 +15,10 @@ switch ($_SERVER['PATH_INFO']){
         break;
     case '/novo-curso';
         $controlador = new FormularioInsercao();
+        $controlador->processaRequisicao();
+        break;
+    case '/salvar-curso';  
+        $controlador = new Persistencia();  
         $controlador->processaRequisicao();
         break;
     default:
