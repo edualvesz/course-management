@@ -2,7 +2,7 @@
 
     <form action="/salvar-curso" class="form-group" method="POST">
         <label for="descricao">Descrição</label>
-        <input type="text" id="descricao" name="descricao" class="form-control"><br>
+        <input type="text" id="descricao" name="descricao" class="form-control" value="<?= isset($curso) ? $curso->getDescricao() : ''; ?>"><br>
         <button class="btn btn-primary">Salvar</button>
     </form>
 
