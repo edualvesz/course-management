@@ -23,8 +23,17 @@ class Persistencia implements InterfaceControladorRequisicao
 
     $curso = new Curso();
     $curso->setDescricao($descricao);
-    $this->entityManager->persist($curso);
-    $this->entityManager->flush();
+
+    $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+
+    if(!is_null($id) && $id === false){
+        $curso->setId($id);
+        $this->entityManager->merge($curso); //merge makes doctrine sees the data like it was come from the database, so its changes will can be sent to the database
+        } else {
+          $this->entityManager->persist($curso);
+        }
+        $this->entityManager->flush();
+
 
     echo "Curso $descricao salvo com sucesso";   //I'll have to put this message in javascript later
     header('Location: /listar-cursos', true, 302);
