@@ -32,18 +32,17 @@ class RealizarLogin implements InterfaceControladorRequisicao
 
     $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
 
-    /** @var Usuario $usuario */
-    $usuario = $this->repositorioDeUsuarios->findOneBy([
-      'email' => $email
-    ]);
+    // /** @var Usuario $usuario */
+    // $usuario = $this->repositorioDeUsuarios->findOneBy([
+    //   'email' => $email
+    // ]);
 
-    if(is_null($usuario) || !$usuario->senhaEstaCorreta($senha)){
-      echo "E-mail ou senha inválidos";
-      return;
-    }
+    // if(is_null($usuario) || !$usuario->senhaEstaCorreta($senha)){
+    //   echo "E-mail ou senha inválidos";
+    //   return;
+    // }
 
     header('Location: /listar-cursos');
   }
 }
 
-?>

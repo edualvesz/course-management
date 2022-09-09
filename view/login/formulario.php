@@ -9,7 +9,7 @@
       <label for="senha">Senha</label>
       <input type="password" name="senha" id="senha" class="form-control">
     </div>
-    <button type="submit" class="btn btn-primary">Entrar</button>
+    <button class="btn btn-primary">Entrar</button>
   </form>
 
 <?php include __DIR__.'/../footer.php'; ?>
